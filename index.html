@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost in Sands - Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="logo">
+        <div>
+            <a href="https://theodinproject.com/" target="_blank">
+                <img src="odin-lined.png" alt="The Odin Project Logo" id="logo-img"/>
+                <p>The Odin Project</p>
+            </a>
+        </div>
+        <p>Photo by <a href="https://unsplash.com/@euzepaulo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ze Paulo Gasparotto</a> on <a href="https://unsplash.com/photos/a-person-riding-a-horse-in-the-desert-SjMAzRKeK88?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </p>
+    </div>
+    <div id="form-div">
+        <p id="filling-text">This is not a real online service! You know you need something
+            like this in your life to help you realize your deepest dreams.
+            Sign up now to get started.<br><br>You know you want to.
+        </p>
+        <form>
+            <div class="fields-div">
+                <h2>Let's do this!</h2>
+                <div>
+                    <div id="first-name-div">
+                        <input type="text" id="first-name" name="first-name"
+                            placeholder="FIRST NAME" value="" required
+                            size="30" pattern="^[A-Z][a-z]{1,}$" />
+                        <label for="first-name" id="test">FIRST NAME(Ex: Andrew)</label>
+                    </div>
+                    <div id="last-name-div">
+                        <input type="text" id="last-name" name="last-name"
+                            placeholder="LAST NAME" value="" required
+                            size="30" pattern="^[A-Z][a-z]{1,}$" />
+                        <label for="last-name">LAST NAME(Ex: Johnson)</label>
+                    </div>
+                    <div id="email-div">
+                        <input type="email" id="email" name="email"
+                            placeholder="EMAIL" value="" required
+                            size="30" />
+                        <label for="email">EMAIL</label>
+                    </div>
+                    <div id="phone-div">
+                        <input type="tel" id="phone" name="phone"
+                            placeholder="PHONE NUMBER" value="" required
+                            size="30" />
+                        <label for="phone">PHONE NUMBER</label>
+                    </div>
+                    <div id="password-div">
+                        <input type="password" id="password" name="password"
+                            placeholder="PASSWORD" value="" required
+                            size="30" />
+                        <label for="password">PASSWORD</label>
+                        <p id="match-passwords">* Passwords do not match</p>
+                    </div>
+                    <div id="password-confirm-div">
+                        <input type="password" id="password-confirm" name="password-confirm"
+                            placeholder="CONFIRM PASSWORD" value="" required
+                            size="30" />
+                        <label for="password-confirm">CONFIRM PASSWORD</label>
+                    </div>
+                </div>
+            </div>
+            <div class="submit-div">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="">Log In</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

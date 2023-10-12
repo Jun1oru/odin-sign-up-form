@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'norsebold';
+    src: url('norse-bold-webfont.woff2') format('woff2'),
+        url('norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(1.5em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background: url(ze-paulo-gasparotto-SjMAzRKeK88-unsplash.jpg) no-repeat center;
+    background-size: auto;
+
+    display: flex;
+    
+    font-size: 16px;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    min-width: 40vw;
+    height: 100vh;
+}
+
+#logo div {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5em;
+}
+
+#logo div a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+#logo div a img {
+    width: 4em;
+}
+
+#logo div a p {
+    font-family: 'norsebold', sans-serif;
+    font-size: 2em;
+    color: white;
+}
+
+#logo > p {
+    color: white;
+    align-self: center;
+    padding-bottom: 1em;
+}
+
+#logo > p a {
+    text-decoration: none;
+    color: gray;
+}
+
+#form-div {
+    min-width: 60vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    padding: 4em;
+}
+
+#filling-text {
+    font-family: sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+
+    color: white;
+
+    margin-bottom: 2em;
+}
+
+#form-div form {
+    width: 100%;
+}
+
+.fields-div {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,1);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,1);
+
+    display: flex;
+    flex-direction: column;
+    
+    padding: 1em;
+}
+
+.fields-div h2 {
+    margin-bottom: 1em;
+}
+
+.fields-div div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+}
+
+#first-name-div, #last-name-div,
+#email-div, #phone-div, #password-div,
+#password-confirm-div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+
+    width: 40%;
+
+    position: relative;
+}
+
+#first-name-div label, #last-name-div label,
+#email-div label, #phone-div label, #password-div label,
+#password-confirm-div label {
+    color: lightgray;
+    visibility: hidden;
+    display: inline-block;
+    position: absolute;
+    top: -1.2em;
+    left: 0.7em;
+}
+
+#first-name, #last-name, #email, #phone,
+#password, #password-confirm {
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+#match-passwords {
+    color: rgba(212, 53, 53, 0.849);
+    visibility: hidden;
+}
+
+button, input {
+    font-family: sans-serif;
+    font-size: 100%;
+}
+
+.submit-div {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    padding: 2em 0 0 1em;
+}
+
+.submit-div button {
+    background-color: rgba(85, 107, 47, 0.6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    max-width: 10em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.submit-div button:hover {
+    background-color: rgba(85, 107, 47, 0.8);
+}
+
+.submit-div button:active {
+    background-color: rgba(85, 107, 47, 1);
+}
+
+.submit-div p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.submit-div p a {
+    text-decoration: none;
+    color: burlywood;
+}
+
+#form-div input {
+    background-color: rgba(44, 36, 36, 0.466);
+}
+
+#form-div input:focus + label,
+#form-div input[required]:valid + label,
+#form-div input:not(:placeholder-shown) + label {
+    -webkit-animation: fade 0.5s;
+    -moz-animation: fade 0.5s;
+    animation: fade 0.5s;
+    visibility: visible;
+}
+
+#form-div input:valid {
+    border: 1px solid green;
+    background-color: rgba(23, 65, 11, 0.74);
+    color: white;
+}
+
+#form-div input:valid + label {
+    color: rgba(23, 65, 11, 0.74);
+}
+
+#form-div input:invalid {
+    border: 1px solid red;
+    background-color: rgba(201, 17, 17, 0.295);
+    color: white;
+}
+
+#form-div input:invalid + label {
+    color: rgba(212, 53, 53, 0.849);
+}
+
+#form-div input:focus:valid,
+#form-div input:focus:invalid {
+    background-color: rgba(44, 36, 36, 0.466);
+    border: 1px solid white;
+}
+
+#form-div input:focus:valid + label,
+#form-div input:focus:invalid + label {
+    color: lightgray;
+}
+
+#form-div input:focus::placeholder {
+    color: transparent;
+}
+
+#form-div input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#form-div input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+#form-div input:focus::-moz-placeholder {
+    color: transparent;
+}
